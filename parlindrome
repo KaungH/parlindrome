@@ -1,0 +1,43 @@
+#include <iostream>
+#include <cmath>
+#include <string>
+
+using namespace std;
+
+int main (){
+    
+    int count;
+    
+    long  h=0;
+    
+    int steps;
+              //The line below ask users to enter step
+    cout<< "This is palindrome! Enter Step: ";                                  
+    cin>> steps;
+    
+    while(steps>7 || steps<1){       //while loop used to restrict the users to only enter between 1-7
+      
+      cout<< "Invalid answer! Enter Integer no less than 1 and no more than 7"<< endl;
+      
+      cout<< "Enter integer here: ";
+      
+      cin>> steps; 
+      
+      if (steps>=1 && steps<=7){ //When entered 1-7 loop do not occur
+      
+        break;
+      }
+    }
+    
+    for (int i=1; i<=steps;i++){      //THIS loop output math
+      for (int j=7; j>i; j--){       //THIS loop output spaces before math
+        cout<<" ";  
+      }
+      h+=(pow(10,i-1));             //inter h is added each cycle by 10 to power of i
+      
+      cout<<h*h<<endl;
+    
+    
+    }
+    return 0;
+  }
